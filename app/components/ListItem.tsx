@@ -8,6 +8,6 @@ type Props = {
     target?: string
 }
 
-export default function ListItem({ children, href, className, target = "_blank" }: Props) {
+export default function ListItem({ children, href, className, target }: Props) {
     return <li className={`${className} underline underline-offset-2`}><Link href={href || ""} target={target}>{children}</Link></li>
 }

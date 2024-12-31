@@ -1,10 +1,8 @@
-import Image from "next/image";
-import Header from "./header.svg";
-import Section from "./components/section";
+import { Section } from "./components/Section";
 import ListItem from "./components/ListItem";
 import Link from "next/link";
 import TwitterEmbed from "./components/TwitterEmbed";
-import Footer from "./components/Footer";
+import NoticeItem from "./components/NoticeItem";
 
 export default function Home() {
     return (
@@ -21,10 +19,8 @@ export default function Home() {
                     </Section>
 
                     <Section title={"お知らせ"}>
-                        <ul className="list-disc ml-5 my-5">
-                            <li>
-                                2024-12-31 どっかでコミケ参加したいね (by nikachu)
-                            </li>
+                        <ul className="list-disc ml-8 my-3">
+                            <NoticeItem time={new Date()} author={"nikachu2012"}>どっかでコミケ参加したいね</NoticeItem>
                         </ul>
                         <Link href={"/"} target="_blank" className="underline underline-offset-2">過去のお知らせ</Link>
                     </Section>

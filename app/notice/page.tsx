@@ -16,7 +16,7 @@ export default function Home() {
                         <div><Link href={"/"} className="underline underline-offset-2">トップ</Link> &gt; お知らせ</div>
                     </div>
 
-                    <div className="ml-2 flex flex-col gap-3 p-3">
+                    <div className="mx-2 flex flex-col gap-3 p-3">
 
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">現在のお知らせ</h2>

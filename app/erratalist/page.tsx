@@ -20,15 +20,15 @@ export default function Home() {
                         {<div>本同好会作成物に下記の通り誤りがございました. お詫びして訂正いたします.</div>}
                         {/* 追加する方へ ErrataItemをコピペで増やしてください 各引数を適切に設定してください */}
                         <ErrataItem
-                            target={"ンゴシリーズ vol-1"}
+                            target={"ンゴシリーズ vol-1(初版)"}
                             errata= {[{at: "1p",falseErrata: "あ",trueErrata: "い"},{at: "1p",falseErrata: "う",trueErrata: "え"}]}
                         />
                         <ErrataItem
-                            target={"ンゴシリーズ vol-1"}
+                            target={"ンゴシリーズ vol-1(第2版)"}
                             errata= {[{at: "1p",falseErrata: "い",trueErrata: "ろはにほへと"}]}
                         />
                     </div>
-                    
+
                 </div>
             </main>
         </>

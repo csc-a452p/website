@@ -29,6 +29,16 @@ export default function Home() {
                         >
                             彼女が欲しいです
                         </MemberItem>
+                        <MemberItem
+                            name={"Toukaitetudou (s23118)"}
+                            link={{
+                                "Twitter": "https://twitter.com/Toukaitetudou",
+                                "Blog":"https://toukaitetudou.hatenablog.com/",
+                                "GitHub": "https://github.com/TKRwm100"
+                            }}
+                        >
+                            コーディングはすべてを解決する
+                        </MemberItem>
                     </div>
                 </div>
             </main>

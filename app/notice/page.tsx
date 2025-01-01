@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import NoticeItem from "../components/NoticeItem";
+import DLink from "../components/DLink";
 
 export const metadata: Metadata = {
     title: 'お知らせ',
@@ -13,7 +13,7 @@ export default function Home() {
                 <div className={`w-full bg-neutral-800 border border-neutral-700 rounded`}>
                     <div className="bg-neutral-700 p-3 pl-5">
                         <h1 className="w-full font-bold text-3xl mb-1">お知らせ</h1>
-                        <div><Link href={"/"} className="underline underline-offset-2">トップ</Link> &gt; お知らせ</div>
+                        <div><DLink href={"/"}>トップ</DLink> &gt; お知らせ</div>
                     </div>
 
                     <div className="mx-2 flex flex-col gap-3 p-3">

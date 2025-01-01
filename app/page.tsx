@@ -4,6 +4,7 @@ import Link from "next/link";
 import TwitterEmbed from "./components/TwitterEmbed";
 import NoticeItem from "./components/NoticeItem";
 import { Metadata } from "next";
+import DLink from "./components/DLink";
 
 export const metadata: Metadata = {
     title: "トップページ"
@@ -28,7 +29,7 @@ export default function Home() {
                         <ul className="list-disc ml-8 my-3">
                             <NoticeItem time={new Date()} author={"nikachu2012"}>どっかでコミケ参加したいね</NoticeItem>
                         </ul>
-                        <Link href={"/"} target="_blank" className="underline underline-offset-2">過去のお知らせ</Link>
+                        <DLink href={"/"} target="_blank">過去のお知らせ</DLink>
                     </Section>
                 </div>
                 <div className="flex-[1] items-stretch">

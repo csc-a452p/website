@@ -33,7 +33,7 @@ export default function GoodsItem({ title, author, detailUrl, size, page, cost, 
                 <span>{cost} {costUnit}</span><Sep />
                 <span><Link href={isdnURL} target="_blank">{isdnStr}</Link> ({Ccode})</span>
                 {hasEBook ? <>
-                    <Sep /><Link href={eBookURL || "eBookURL must be filled."} className="underline underline-offset-2" target="_blank">電子版あり</Link>
+                    <Sep /><DLink href={eBookURL || "eBookURL must be filled."} target="_blank">電子版あり</DLink>
                 </> : <></>}
             </div>
             {/* <div className="flex justify-end gap-1">

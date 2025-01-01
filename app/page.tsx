@@ -29,7 +29,7 @@ export default function Home() {
                     <Section title={"メニュー"} className="h-full">
                         <ul className="list-disc ml-5">
                             <ListItem href={"notice"}>お知らせ</ListItem>
-                            <ListItem href={""}>刊行・制作物一覧</ListItem>
+                            <ListItem href={"goods"}>刊行・制作物一覧</ListItem>
                             <ListItem href={""}>イベント参加歴</ListItem>
                             <ListItem href={""}>メンバー紹介</ListItem>
                             <ListItem href={""}>各種SNS</ListItem>

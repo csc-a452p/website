@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const notoserif = Noto_Serif_JP({
-  variable: "--font-noto-serif"
+  variable: "--font-noto-serif",
+  subsets: ["latin"]
 })
 
 

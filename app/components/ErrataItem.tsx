@@ -1,6 +1,3 @@
-import { ReactNode } from "react";
-import DLink from "./DLink";
-
 type Props = {
     target: string,
     errata: {

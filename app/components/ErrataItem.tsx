@@ -1,9 +1,16 @@
 import { ReactNode } from "react";
 import DLink from "./DLink";
 
+type Props = {
+    target: string,
+    errata: {
+        at: string,
+        falseErrata: string,
+        trueErrata: string
+    }[]
+}
 
-
-export default function ErrataItem({ target, errata }: { target: string, errata: { at: string, falseErrata: string, trueErrata: string }[] }) {
+export default function ErrataItem({ target, errata }: Props) {
     return <div className="border border-neutral-700 text-wrap px-3 py-2">
         <div className="font-bold text-2xl leading-none my-1">{target}</div>
         <div className="mt-2">

@@ -23,11 +23,15 @@ export default function ErrataItem({ target, errata }: Props) {
                     </tr>
                 </thead>
                 <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
-            {
-                Object.keys(errata).map((e, i) => {
-                    return <tr><td>{errata[i].at}</td><td>{errata[i].falseErrata}</td><td>{errata[i].trueErrata}</td></tr>
-                })
-            }                    
+                    {
+                        errata.map((e, i) => {
+                            return <tr key={i}>
+                                <td>{e.at}</td>
+                                <td>{e.falseErrata}</td>
+                                <td>{e.trueErrata}</td>
+                            </tr>
+                        })
+                    }
                 </tbody>
             </table>
 

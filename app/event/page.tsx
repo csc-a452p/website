@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import GoodsItem from "../components/GoodsItem";
 import DLink from "../components/DLink";
 
 export const metadata: Metadata = {

@@ -5,9 +5,9 @@ import { FormEvent } from "react";
 async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    // const formData = new FormData(event.currentTarget);
 
-    const response = await fetch(process.env.API_URL || "");
+    // const response = await fetch(process.env.API_URL || "");
 }
 
 export default function Form() {

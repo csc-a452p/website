@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import GoodsItem from "../components/GoodsItem";
 import DLink from "../components/DLink";
-import MemberItem from "../components/MemberItem";
 import { TwitterTimeline } from "../components/TwitterEmbed";
 
 export const metadata: Metadata = {

@@ -4,7 +4,7 @@ import DLink from "../components/DLink";
 import MemberItem from "../components/MemberItem";
 
 export const metadata: Metadata = {
-    title: 'イベント参加',
+    title: 'メンバー紹介',
 }
 
 export default function Home() {

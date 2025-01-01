@@ -3,6 +3,12 @@ import ListItem from "./components/ListItem";
 import Link from "next/link";
 import TwitterEmbed from "./components/TwitterEmbed";
 import NoticeItem from "./components/NoticeItem";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "トップページ"
+};
+
 
 export default function Home() {
     return (

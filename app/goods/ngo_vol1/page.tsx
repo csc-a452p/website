@@ -3,7 +3,7 @@ import Image from "next/image";
 import DLink from "@/app/components/DLink";
 
 export const metadata: Metadata = {
-    title: 'お知らせ',
+    title: 'ンゴシリーズ vol.1',
 }
 
 export default function Page() {

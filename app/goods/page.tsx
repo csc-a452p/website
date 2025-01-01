@@ -3,7 +3,7 @@ import GoodsItem from "../components/GoodsItem";
 import DLink from "../components/DLink";
 
 export const metadata: Metadata = {
-    title: 'お知らせ',
+    title: '刊行・制作物一覧',
 }
 
 export default function Home() {

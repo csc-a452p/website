@@ -1,4 +1,4 @@
-import { Section } from "./components/Section";
+import { Section } from "./components/section";
 import ListItem from "./components/ListItem";
 import Link from "next/link";
 import TwitterEmbed from "./components/TwitterEmbed";

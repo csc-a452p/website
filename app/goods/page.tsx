@@ -3,7 +3,7 @@ import GoodsItem from "../components/GoodsItem";
 import DLink from "../components/DLink";
 
 export const metadata: Metadata = {
-    title: '刊行・制作物一覧',
+    title: '販売品一覧',
 }
 
 export default function Home() {
@@ -12,8 +12,8 @@ export default function Home() {
             <main className="w-full md:m-auto flex gap-2">
                 <div className={`w-full bg-neutral-800 border border-neutral-700 rounded`}>
                     <div className="bg-neutral-700 p-3 pl-5">
-                        <h1 className="w-full font-bold text-3xl mb-1">刊行・制作物一覧</h1>
-                        <div><DLink href={"/"}>トップ</DLink> &gt; 刊行・制作物一覧</div>
+                        <h1 className="w-full font-bold text-3xl mb-1">販売品一覧</h1>
+                        <div><DLink href={"/"}>トップ</DLink> &gt; 販売品一覧</div>
                     </div>
 
                     <div className="mx-2 flex flex-col gap-3 p-3">

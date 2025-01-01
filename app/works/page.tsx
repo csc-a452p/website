@@ -17,20 +17,17 @@ export default function Home() {
                     </div>
 
                     <div className="mx-2 flex flex-col gap-3 p-3">
-
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">制作物一覧</h2>
-                            <ul className="list-disc ml-8 flex flex-col gap-2">
+                            <div className="mx-3 flex flex-col gap-2">
                                 <WorkItem
                                     thumbnail="/assets/works/nitncwebdoc/thumbnail.png"
                                     link="https://nitnc-handbook.vercel.app/"
                                     title="沼津高専学生便覧HTML版"
                                     description="R5年度の学生便覧の一部をHTMLに書き起こしました。この取り組みは学校公式のものになる可能性があります。"
                                 />
-
-                            </ul>
+                            </div>
                         </div>
-
 
                     </div>
                 </div>

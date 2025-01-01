@@ -36,7 +36,6 @@ export default function Home() {
                                     hasEBook={true}
                                     eBookURL={"https://csc-a452p.booth.pm/items/6439916"} />
                             </div>
-
                         </div>
 
                         <div className="flex flex-col gap-2">

@@ -1,6 +1,6 @@
 import { Section } from "./components/section";
 import ListItem from "./components/ListItem";
-import TwitterEmbed from "./components/TwitterEmbed";
+import { TwitterFollowButton } from "./components/TwitterEmbed";
 import NoticeItem from "./components/NoticeItem";
 import { Metadata } from "next";
 import DLink from "./components/DLink";
@@ -20,7 +20,7 @@ export default function Home() {
                         同人誌「ンゴシリーズ」を制作しています。2024年末現在、高専とは一切関係ない団体です。
 
                         <div className="mt-3">
-                            <TwitterEmbed />
+                            <TwitterFollowButton id="csc_a452p" />
                         </div>
                     </Section>
 

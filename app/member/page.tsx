@@ -17,12 +17,14 @@ export default function Home() {
                     </div>
 
                     <div className="mx-2 flex flex-col gap-3 p-3">
+                        {/* 追加する方へ MemberItemをコピペで増やしてください 良い感じの説明文も書いてほしいです */}
                         <MemberItem
                             name={"nikachu2012 (s23112)"}
                             link={{
                                 "Twitter": "https://twitter.com/nikachu2012",
                                 "Instagram": "https://instagram.com/nikachu2012",
-                                "Portfolio": "https://portfolio.nikachu.net"
+                                "Portfolio": "https://portfolio.nikachu.net",
+                                "GPG Public Key": "https://portfolio.nikachu.net/publickey"
                             }}
                         >
                             彼女が欲しいです

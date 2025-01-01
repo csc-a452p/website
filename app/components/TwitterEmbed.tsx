@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function TwitterEmbed() {
+export function TwitterFollowButton({ id }: { id: string }) {
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://platform.twitter.com/widgets.js';
@@ -14,5 +14,21 @@ export default function TwitterEmbed() {
         };
     }, []);
 
-    return <a href="https://twitter.com/csc_a452p?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @csc_a452p</a>;
+    return <a href={`https://twitter.com/${id}?ref_src=twsrc%5Etfw`} className="twitter-follow-button" data-show-count="false">Follow @{id}</a>;
 }
+
+export function TwitterTimeline({ id }: { id: string }) {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://platform.twitter.com/widgets.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
+    return <a className="twitter-timeline" href={`https://twitter.com/${id}?ref_src=twsrc%5Etfw`}>Tweets by {id}</a> ;
+}
+

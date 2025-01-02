@@ -36,6 +36,11 @@ export async function POST(request: NextRequest) {
                         "inline": false
                     },
                     {
+                        "name": "IPアドレス",
+                        "value": request.headers.get('X-Forwarded-For'),
+                        "inline": false,
+                    },
+                    {
                         "name": "返信用メールアドレス",
                         "value": requestBody.email,
                         "inline": false

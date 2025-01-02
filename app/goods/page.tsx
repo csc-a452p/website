@@ -1,12 +1,54 @@
 import { Metadata } from "next";
-import GoodsItem from "../components/GoodsItem";
+import { GoodsBookItem } from "../components/GoodsItem";
 import DLink from "../components/DLink";
+import { join, parse } from "path";
+import { readFileSync } from "fs";
+import { listFiles } from "../utils/listFiles";
+import { DATA_PATH, NEWLY_GOODS_PATH } from "../utils/dataConst";
 
 export const metadata: Metadata = {
     title: '販売品一覧',
 }
 
+function generateElement(arr: { id: string, goods: goods }[]) {
+    return arr.map(({ id, goods }) =>
+        goods.type == "book"
+            ? <GoodsBookItem
+                key={id}
+                title={goods.title}
+                author={goods.author.show}
+                detailUrl={`/goods/${id}`}
+                size={goods.size}
+                page={goods.pages}
+                cost={goods.price}
+                costUnit={goods.priceUnit}
+                isdnStr={goods.code.isdn}
+                isdnURL={goods.code.url}
+                Ccode={goods.code.cCode}
+                hasEBook={goods.onlineSaleUrl !== undefined}
+                eBookURL={goods.onlineSaleUrl} />
+            : <></>
+    )
+}
+
 export default function Home() {
+    const goodsPathList = listFiles(join(DATA_PATH, "goods"));
+    const { newly }: { newly: string[] } = JSON.parse(readFileSync(NEWLY_GOODS_PATH, "utf-8"));
+
+    const goodsList = goodsPathList.map(e => ({
+        id: parse(e).name,
+        goods: JSON.parse(readFileSync(e, "utf-8")) as goods
+    }))
+
+    const goodsNewlyList = newly.map(e => ({
+        id: e,
+        goods: JSON.parse(readFileSync(join(DATA_PATH, "goods", e + ".json"), "utf-8"))
+    }))
+
+    // 日付で降順ソート
+    goodsList.sort((a, b) => Date.parse(b.goods.releaseDate) - Date.parse(a.goods.releaseDate));
+    console.log(goodsNewlyList)
+
     return (
         <>
             <main className="w-full md:m-auto flex gap-2">
@@ -22,19 +64,7 @@ export default function Home() {
                             <h2 className="text-xl font-bold">新刊</h2>
                             <div className="mx-3 flex flex-col gap-2">
                                 新刊の定義がわからないので、一番最近に刊行したものを新刊とします。
-                                <GoodsItem
-                                    title={"ンゴシリーズ vol.1"}
-                                    author={"情報工学同好会 総員"}
-                                    detailUrl={"goods/ngo_vol1"}
-                                    size={"A4"}
-                                    page={52}
-                                    cost={500}
-                                    costUnit={"JPY"}
-                                    isdnStr={"ISDN278-4-874194-01-7"}
-                                    isdnURL={"https://isdn.jp/2784874194017"}
-                                    Ccode={"C3455"}
-                                    hasEBook={true}
-                                    eBookURL={"https://csc-a452p.booth.pm/items/6439916"} />
+                                {generateElement(goodsNewlyList)}
                             </div>
                         </div>
 
@@ -42,19 +72,7 @@ export default function Home() {
                             <h2 className="text-xl font-bold">一覧</h2>
 
                             <div className="mx-3 flex flex-col gap-2">
-                                <GoodsItem
-                                    title={"ンゴシリーズ vol.1"}
-                                    author={"情報工学同好会 総員"}
-                                    detailUrl={"goods/ngo_vol1"}
-                                    size={"A4"}
-                                    page={52}
-                                    cost={500}
-                                    costUnit={"JPY"}
-                                    isdnStr={"ISDN278-4-874194-01-7"}
-                                    isdnURL={"https://isdn.jp/2784874194017"}
-                                    Ccode={"C3455"}
-                                    hasEBook={true}
-                                    eBookURL={"https://csc-a452p.booth.pm/items/6439916"} />
+                                {generateElement(goodsList)}
                             </div>
 
                         </div>

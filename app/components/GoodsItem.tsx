@@ -20,7 +20,7 @@ function Sep() {
     return <span className="mx-1 select-none">/</span>
 }
 
-export default function GoodsItem({ title, author, detailUrl, size, page, cost, costUnit, isdnStr, isdnURL, Ccode, hasEBook, eBookURL }: Props) {
+export function GoodsBookItem({ title, author, detailUrl, size, page, cost, costUnit, isdnStr, isdnURL, Ccode, hasEBook, eBookURL }: Props) {
     return <div className="border border-neutral-700 text-wrap ">
         <div className="p-3">
             <div className="font-bold text-xl ">

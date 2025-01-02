@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     const f = JSON.parse(readFileSync(path, "utf-8")) as goods;
 
     return {
-        title: f.title,
+        title: `${f.title} 正誤情報`,
     }
 }
 

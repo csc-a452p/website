@@ -10,7 +10,7 @@ export default function ErrataItem({ target, errata }: Props) {
     return <div className="border border-neutral-700 text-wrap px-3 py-2">
         <div className="font-bold text-2xl leading-none my-1">{target}</div>
         <div className="mt-3">
-            <ul className="list-disc ml-5 mt-3 flex flex-col gap-3">
+            <ul className="list-disc ml-6 mt-3 flex flex-col gap-3">
                 {
                     errata.map((e, i) => {
                         return <li key={i}>

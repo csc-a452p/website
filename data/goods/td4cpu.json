@@ -32,7 +32,6 @@
         }
     ],
     "additionalFields": {
-        "key": "value"
     },
     "additionalLinks": {
         "冊子のPDFや部品表": "https://github.com/nikachu2012/td4cpu"

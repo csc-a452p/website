@@ -1,11 +1,28 @@
 import { Metadata } from "next";
 import DLink from "../components/DLink";
+import { listFiles } from "../utils/listFiles";
+import { DATA_PATH } from "../utils/dataConst";
+import { join } from "path";
+import { readFileSync } from "fs";
+import EventItem from "../components/EventItem";
 
 export const metadata: Metadata = {
     title: 'イベント参加',
 }
 
 export default function Home() {
+    const eventPathList = listFiles(join(DATA_PATH, "event"));
+    const eventList = eventPathList.map(e => JSON.parse(readFileSync(e, "utf-8")) as eventType);
+
+    eventList.sort((a, b) => Date.parse(b.start) - Date.parse(a.start));
+
+    const willPart: eventType[] = []
+    eventList.forEach(e => {
+        if (e.willPart)
+            willPart.push(e)
+    })
+
+
     return (
         <>
             <main className="w-full md:m-auto flex gap-2">
@@ -20,44 +37,21 @@ export default function Home() {
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">参加予定のイベント</h2>
                             <div className="mx-3 flex flex-col gap-2">
-                                参加予定のイベントはありません
+                                {willPart.length <= 0
+                                    ? "参加予定のイベントはありません"
+                                    : willPart.map(e => <EventItem event={e} key={e.name.full} />)}
                             </div>
 
                         </div>
 
-                        <hr className="border border-neutral-700"/>
+                        <hr className="border border-neutral-700" />
 
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">過去に参加したイベント</h2>
 
-                            <div className="mx-3 flex flex-col gap-5">
-
-                                <div className="text-wrap">
-                                    <div className="font-bold text-lg">沼津高専 第59回高専祭</div>
-                                    <div className="mt-1">
-                                        2024-11-09 - 2024-11-10 / 講義棟1F M3教室(内線番号2603)
-                                    </div>
-
-                                    <div className="mt-1">
-                                        <table className="border-collapse border border-neutral-700">
-                                            <thead className="[&_th]:border [&_th]:border-neutral-700 [&_th]:p-1 [&_th]:px-2">
-                                                <tr>
-                                                    <th>種別</th>
-                                                    <th>商品名(値段)</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
-                                                <tr>
-                                                    <td>新刊</td>
-                                                    <td>ンゴシリーズ vol.1(500 JPY)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
+                            <div className="mx-3 mb-3 flex flex-col gap-3">
+                                {eventList.map(e => <EventItem event={e} key={e.name.full} />)}
                             </div>
-
                         </div>
                     </div>
                 </div>

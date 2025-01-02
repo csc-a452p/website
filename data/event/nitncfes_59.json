@@ -1,0 +1,23 @@
+{
+    "name": {
+        "full": "沼津高専 第59回高専祭",
+        "name": "沼津高専 高専祭",
+        "count": 59
+    },
+    "start": "2024-11-09",
+    "end": "2024-11-10",
+    "place": "講義棟1F M3教室(内線番号2603)",
+    "sell": [
+        {
+            "isNewly": true,
+            "name": "ンゴシリーズ vol.1",
+            "id": "ngo_vol1",
+            "price": 500,
+            "priceUnit": "JPY"
+        }
+    ],
+    "additionalLink": {
+        "key": "value"
+    },
+    "willPart": false
+}

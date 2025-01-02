@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ImagePopup from "./ImagePopup";
 
 type Props = {
     target: string,
@@ -19,14 +20,16 @@ export default function ErrataItem({ target, errata }: Props) {
                                 <span className="font-bold">誤: </span>
 
                                 <div className="ml-1">
-                                    {e.wrongImg ?  <Link href={e.wrongImg}><Image src={e.wrongImg} alt={`誤`} width={500} height={300} className="bg-white p-2" /></Link> : e.wrong}
+                                    {e.wrongImg ?  <ImagePopup src={e.wrongImg} alt={`誤`} width={700} height={500} className="bg-white p-2" /> : e.wrong}
+
                                 </div>
+                            
                             </div>
                             <div className="flex mt-1">
                                 <span className="font-bold">正: </span>
 
                                 <div className="ml-1">
-                                    {e.correctImg ? <Link href={e.correctImg}><Image src={e.correctImg} alt={`正`} width={500} height={300} className="bg-white p-2" /></Link> : e.correct}
+                                    {e.correctImg ? <ImagePopup src={e.correctImg} alt={`正`} width={700} height={500} className="bg-white p-2" /> : e.correct}
                                 </div>
                             </div>
                         </li>

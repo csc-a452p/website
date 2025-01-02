@@ -37,6 +37,7 @@ export default function Home() {
                             <ListItem href={"notice"}>お知らせ</ListItem>
                             <ListItem href={"goods"}>販売品一覧</ListItem>
                             <ListItem href={"works"}>制作物一覧</ListItem>
+                            <ListItem href={"errata"}>正誤情報</ListItem>
                             <ListItem href={"notes"}>雑記</ListItem>
                             <ListItem href={"event"}>イベント参加歴</ListItem>
                             <ListItem href={"member"}>メンバー紹介</ListItem>

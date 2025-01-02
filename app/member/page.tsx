@@ -39,6 +39,18 @@ export default function Home() {
                         >
                             コーディングはすべてを解決する
                         </MemberItem>
+                        <MemberItem
+                            name={"npnp (s23131)"}
+                            link={{
+                                "Twitter": "https://twitter.com/css_py",
+                                "Instagram": "https://www.instagram.com/csspy1185/",
+                                "Facebook":"https://www.facebook.com/profile.php?id=100095130291067",
+                                "Moodle":"https://moodle.numazu-ct.ac.jp/moodle/user/profile.php?id=5588",
+                                "GitHub": "https://github.com/KohsukeFujita"
+                            }}
+                        >
+                            エレファント解法こそすべて
+                        </MemberItem>
                     </div>
                 </div>
             </main>

@@ -63,7 +63,7 @@ const ImagePopup: React.FC<ImagePopupProps> = ({
         objectPosition={objectPosition}
         unoptimized={unoptimized}
         onClick={handleOpen}
-        className={`cursor-pointer max-w-xs ${className || ""}`}
+        className={`cursor-pointer ${className || ""}`}
       />
 
       {/* ポップアップ */}

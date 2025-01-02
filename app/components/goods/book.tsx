@@ -63,13 +63,13 @@ export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
                                         </tbody>
                                     </table>
 
-                                    <div className="mt-3">
-                                        {
-                                            p.onlineSaleUrl !== undefined
-                                                ? <DLink href={p.onlineSaleUrl} target="_blank">電子版販売ページはこちら</DLink>
-                                                : <></>
-                                        }
-                                    </div>
+                                    {
+                                        p.onlineSaleUrl !== undefined
+                                            ? <div className="mt-3">
+                                                <DLink href={p.onlineSaleUrl} target="_blank">電子版販売ページはこちら</DLink>
+                                            </div>
+                                            : <></>
+                                    }
                                 </div>
                             </div>
                             <div>

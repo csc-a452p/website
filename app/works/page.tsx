@@ -23,6 +23,7 @@ export default function Home() {
                                 <WorkItem
                                     thumbnail="/assets/works/nitncwebdoc/thumbnail.png"
                                     link="https://nitnc-handbook.vercel.app/"
+                                    external={true}
                                     title="沼津高専学生便覧HTML版"
                                     description="R5年度の学生便覧の一部をHTMLに書き起こしました。この取り組みは学校公式のものになる可能性があります。"
                                 />

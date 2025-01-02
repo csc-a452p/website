@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
                     },
                     {
                         "name": "IPアドレス",
-                        "value": request.headers.get('X-Forwarded-For'),
+                        "value": request.headers.get('CF-Connecting-IP'),
                         "inline": false,
                     },
                     {

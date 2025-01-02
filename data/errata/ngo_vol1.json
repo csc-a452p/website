@@ -1,0 +1,21 @@
+{
+    "1": [
+        {
+            "at": "p.4 14,15行目(数式込)",
+            "wrongImg": "/assets/errata/ngo_vol1/wrong_1_1.svg",
+            "correctImg": "/assets/errata/ngo_vol1/correct_1_1.svg"
+        },
+        {
+            "at": "p.35 2-3行目",
+            "wrong": "一般的に用いられる素数は非常の大きく, ",
+            "correct": "一般的に用いられる素数は非常に大きく, "
+        }
+    ],
+    "2": [
+        {
+            "at": "p.34 セクション3.1内",
+            "wrongImg": "/assets/errata/ngo_vol1/wrong_2_1.svg",
+            "correctImg": "/assets/errata/ngo_vol1/correct_2_1.svg"
+        }
+    ]
+}

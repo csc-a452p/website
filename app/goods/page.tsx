@@ -47,7 +47,6 @@ export default function Home() {
 
     // 日付で降順ソート
     goodsList.sort((a, b) => Date.parse(b.goods.releaseDate) - Date.parse(a.goods.releaseDate));
-    console.log(goodsNewlyList)
 
     return (
         <>

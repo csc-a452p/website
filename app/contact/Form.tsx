@@ -8,7 +8,7 @@ async function onSubmit(event: FormEvent<HTMLFormElement>) {
     const formData = Object.fromEntries(new FormData(event.currentTarget).entries());
     console.log(formData)
 
-    const response = await fetch("/api/form",{
+    const response = await fetch("/api/form", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -16,12 +16,19 @@ async function onSubmit(event: FormEvent<HTMLFormElement>) {
         body: JSON.stringify(formData)
     });
 
-    if(response.ok){
+    if (response.ok) {
         alert("正常に送信されました");
         window.location.reload();
     }
-    else{
-        alert((await response.json()).reason);
+    else {
+        try {
+            alert((await response.json()).reason);
+        }
+        catch (e){
+            console.error(e);
+
+            alert("送信できませんでした")
+        }
     }
 }
 
@@ -29,12 +36,12 @@ export default function Form() {
     return <form onSubmit={onSubmit}>
         <div>
             <div className="text-sm mb-1">お名前</div>
-            <input type="text" className="bg-neutral-800 border border-neutral-700 rounded p-2" placeholder="" name="name" required maxLength={256}/>
+            <input type="text" className="bg-neutral-800 border border-neutral-700 rounded p-2" placeholder="" name="name" required maxLength={256} />
         </div>
 
         <div className="mt-2">
             <div className="text-sm mb-1">返信用メールアドレス</div>
-            <input type="email" className="bg-neutral-800 border border-neutral-700 rounded p-2" placeholder="example@example.com" name="email" required maxLength={256}/>
+            <input type="email" className="bg-neutral-800 border border-neutral-700 rounded p-2" placeholder="example@example.com" name="email" required maxLength={256} />
         </div>
 
         <div className="mt-2 w-full">

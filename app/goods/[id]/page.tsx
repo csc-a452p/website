@@ -1,4 +1,5 @@
 import GoodsBook from "@/app/components/goods/book";
+import GoodsItem from "@/app/components/goods/item";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import { listFiles } from "@/app/utils/listFiles";
 import { readFileSync } from "fs";
@@ -37,14 +38,12 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     const f = JSON.parse(readFileSync(path, "utf-8")) as goods;
 
     if (f.type == "book") {
-        const p = f as goodsBook;
-
-        return <GoodsBook id={id} p={p} />
+        return <GoodsBook id={id} p={f} />
     }
     else if (f.type == "item") {
-        throw new Error("販売物のitemタイプは未実装です");
+        return <GoodsItem id={id} p={f} />
     }
     else {
-        throw new Error(`販売物ページ${id} の生成中に予期しないタイプ${f.type}が渡されました`);
+        throw new Error(`販売物ページ${id} の生成中に予期しないタイプが渡されました`);
     }
 }

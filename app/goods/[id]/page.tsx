@@ -1,16 +1,12 @@
 import GoodsBook from "@/app/components/goods/book";
-import { readdirSync, readFileSync } from "fs";
+import { listFiles } from "@/app/utils/listFiles";
+import { readFileSync } from "fs";
 import { join, parse } from "path";
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 const DATA_DIR = "data"
-
-const listFiles = (dir: string): string[] =>
-    readdirSync(dir, { withFileTypes: true }).flatMap(dirent =>
-        dirent.isFile() ? [join(dir, dirent.name)] : listFiles(join(dir, dirent.name))
-    )
 
 export function generateStaticParams() {
     const paths: { id: string }[] = []

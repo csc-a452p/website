@@ -25,6 +25,9 @@ export async function POST(request: NextRequest) {
         return Response.json({ status: false, reason: process.env.DONT_USE_CLIENT_MSG }, { status: 400 });
     }
 
+    const ipaddr = request.headers.get('CF-Connecting-IP');
+    console.log(request)
+
     const responseBody = {
         "embeds": [
             {
@@ -37,7 +40,7 @@ export async function POST(request: NextRequest) {
                     },
                     {
                         "name": "IPアドレス",
-                        "value": request.headers.get('CF-Connecting-IP'),
+                        "value": ipaddr || "null",
                         "inline": false,
                     },
                     {

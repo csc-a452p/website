@@ -1,5 +1,6 @@
 import DLink from "@/app/components/DLink";
 import ErrataItem from "@/app/components/ErrataItem";
+import { DATA_PATH } from "@/app/utils/dataConst";
 import { listFiles } from "@/app/utils/listFiles";
 import { readFileSync } from "fs";
 import { join, parse } from "path";
@@ -13,8 +14,7 @@ const DATA_DIR = "data"
 export function generateStaticParams() {
     const paths: { id: string }[] = []
 
-    const currentDir = process.cwd();
-    const files = listFiles(join(currentDir, DATA_DIR, "errata"));
+    const files = listFiles(join(DATA_PATH, "errata"));
 
     files.forEach(e => {
         paths.push({
@@ -27,7 +27,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
-    const path = join(process.cwd(), DATA_DIR, "goods", id + ".json");
+    const path = join(DATA_PATH, "goods", id + ".json");
     const f = JSON.parse(readFileSync(path, "utf-8")) as goods;
 
     return {
@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
 
-    const pathGoods = join(process.cwd(), DATA_DIR, "goods", id + ".json");
-    const pathErrata = join(process.cwd(), DATA_DIR, "errata", id + ".json");
+    const pathGoods = join(DATA_PATH, "goods", id + ".json");
+    const pathErrata = join(DATA_PATH, "errata", id + ".json");
 
     const goods = JSON.parse(readFileSync(pathGoods, "utf-8")) as goods;
     const errata = JSON.parse(readFileSync(pathErrata, "utf-8")) as Errata;

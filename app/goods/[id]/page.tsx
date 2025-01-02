@@ -1,4 +1,5 @@
 import GoodsBook from "@/app/components/goods/book";
+import { DATA_PATH } from "@/app/utils/dataConst";
 import { listFiles } from "@/app/utils/listFiles";
 import { readFileSync } from "fs";
 import { join, parse } from "path";
@@ -6,13 +7,10 @@ import { join, parse } from "path";
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
-const DATA_DIR = "data"
-
 export function generateStaticParams() {
     const paths: { id: string }[] = []
 
-    const currentDir = process.cwd();
-    const files = listFiles(join(currentDir, DATA_DIR, "goods"));
+    const files = listFiles(join(DATA_PATH, "goods"));
     files.forEach(e => {
         paths.push({
             id: parse(e).name,
@@ -24,7 +22,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
-    const path = join(process.cwd(), DATA_DIR, "goods", id + ".json");
+    const path = join(DATA_PATH, "goods", id + ".json");
     const f = JSON.parse(readFileSync(path, "utf-8")) as goods;
 
     return {
@@ -35,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
 
-    const path = join(process.cwd(), DATA_DIR, "goods", id + ".json");
+    const path = join(DATA_PATH, "goods", id + ".json");
     const f = JSON.parse(readFileSync(path, "utf-8")) as goods;
 
     if (f.type == "book") {

@@ -22,6 +22,7 @@ export default function Home() {
                             <div className="mx-3 flex flex-col gap-2">
                                 <ul className="list-disc ml-5">
                                     <ListItem href={"/assets/notes/RemoteControlWithSensor.pdf"} target="_blank">スマートフォンのセンサを利用したパソコンの遠隔操作</ListItem>
+                                    <ListItem href={"/assets/notes/makeAGirlFriend.pdf"} target="_blank">彼女作るンゴ</ListItem>
                                 </ul>
                             </div>
                         </div>

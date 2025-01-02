@@ -1,0 +1,82 @@
+{
+    "type": "book",
+    "title": "ンゴシリーズ vol.1",
+    "series": "ンゴシリーズ",
+    "vol": 1,
+    "releaseDate": "2024-11-01",
+    "description": "高専生が、情報や数理系のジャンルでまとめたいと思ったことをまとめる「ンゴシリーズ」のvol.1です。",
+    "thumbnail": "/assets/goods/ngo_vol1/front.png",
+    "code": {
+        "type": "isdn",
+        "isdn": "ISDN278-4-874194-01-7",
+        "cCode": "C3455",
+        "url": "https://isdn.jp/2784874194017"
+    },
+    "pages": 52,
+    "author": {
+        "show": "情報工学同好会 総員",
+        "detail": [
+            "s23112",
+            "s23113",
+            "s23114",
+            "s23118",
+            "s23125",
+            "s23131"
+        ]
+    },
+    "tableOfContents": [
+        "ビュフォンの針やるンゴ",
+        "コンパイラ作るンゴ",
+        "沼津高専の学生証解説するンゴ",
+        "ジェネリックSwitchBot作るンゴ",
+        ".oud2解析するンゴ",
+        "RSA暗号使うンゴ",
+        "深層学習やるンゴ"
+    ],
+    "genre": [
+        "general"
+    ],
+    "language": "ja",
+    "isR18": false,
+    "tags": [
+        "学生証",
+        "電子工作",
+        "AI",
+        "アルゴリズム"
+    ],
+    "price": 500,
+    "priceUnit": "JPY",
+    "size": "A4",
+    "notes": "表紙のポケットコンピュータは本誌には登場しません。",
+    "onlineSaleUrl": "https://csc-a452p.booth.pm/items/6439916",
+    "salesHistory": [
+        {
+            "event": "沼津高専 第59回高専祭",
+            "start": "2024-11-09",
+            "end": "2024-11-10",
+            "revision": 1,
+            "price": 500,
+            "priceUnit": "JPY"
+        }
+    ],
+    "revisionHistory": [
+        {
+            "revision": 1,
+            "print": 1,
+            "releaseDate": "2024-11-01",
+            "place": "沼津高専 第59回高専祭"
+        },
+        {
+            "revision": 2,
+            "print": 1,
+            "releaseDate": "2024-12-24",
+            "place": "BOOTH販売"
+        }
+    ],
+    "additionalFields": {
+        "key": "value"
+    },
+    "additionalLinks": {
+        "ISDN 登録情報": "https://isdn.jp/2784874194017"
+    }
+}

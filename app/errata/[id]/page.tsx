@@ -8,9 +8,6 @@ import { join, parse } from "path";
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
-const DATA_DIR = "data"
-
-
 export function generateStaticParams() {
     const paths: { id: string }[] = []
 

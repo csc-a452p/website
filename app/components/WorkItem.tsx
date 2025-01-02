@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -20,18 +21,20 @@ export default function WorkItem({ thumbnail, title, description, link, external
                 />
             </a>
             <div className="flex-1">
-            <h3 className="m-0 text-lg font-bold text-white flex items-center">
-                    <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
-                    {external && (
-                        <span className="ml-2 relative w-4 h-4">
-                            <Image
-                                src={externalIconSrc}
-                                alt="External Link Icon"
-                                layout="fill"
-                                objectFit="contain"
-                            />
-                        </span>
-                    )}
+                <h3 className="m-0 text-lg font-bold text-white">
+                    <Link href={link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        {title}
+                        {external && (
+                            <span className="ml-2 relative w-4 h-4">
+                                <Image
+                                    src={externalIconSrc}
+                                    alt="External Link Icon"
+                                    layout="fill"
+                                    objectFit="contain"
+                                />
+                            </span>
+                        )}
+                    </Link>
                 </h3>
                 <p className="mt-1 text-sm text-gray-300">{description}</p>
             </div>

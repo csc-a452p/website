@@ -1,8 +1,10 @@
 import { NextRequest } from "next/server";
+import { headers } from "next/headers";
 
 export const runtime = "edge";
 
 export async function POST(request: NextRequest) {
+    const headerStore = await headers();
     const requestBody = await request.json();
 
     if (process.env.API_URL == undefined || process.env.DONT_USE_CLIENT_MSG == undefined) {
@@ -25,8 +27,7 @@ export async function POST(request: NextRequest) {
         return Response.json({ status: false, reason: process.env.DONT_USE_CLIENT_MSG }, { status: 400 });
     }
 
-    const ipaddr = request.headers.get('CF-Connecting-IP');
-    console.log(request)
+    const ipaddr = headerStore.get('CF-Connecting-IP');
 
     const responseBody = {
         "embeds": [

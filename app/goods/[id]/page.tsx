@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import GoodsBook from "@/app/components/goods/book";
 import { readdirSync, readFileSync } from "fs";
 import { join, parse } from "path";

@@ -62,7 +62,7 @@ export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
                                             </tr>
                                             {
                                                 p.additionalFields !== undefined ? Object.keys(p.additionalFields).map(e => (
-                                                    <tr>
+                                                    <tr key={e}>
                                                         <td>{e}</td>
                                                         <td>{p.additionalFields?.[e] || "undefined"}</td>
                                                     </tr>

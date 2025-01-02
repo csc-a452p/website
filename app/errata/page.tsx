@@ -40,7 +40,7 @@ export default function Home() {
                         <ul className="list-disc ml-6">
                             {
                                 wrongIdList.map(e => {
-                                    return <li>
+                                    return <li key={e.item}>
                                         <DLink href={e.href}>{e.item}</DLink>
                                     </li>
                                 })

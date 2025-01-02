@@ -26,10 +26,10 @@ type goodsBook = {
     onlineSaleUrl?: string
     salesHistory: saleHistoryItem[],
     revisionHistory: revisionHistoryItem[],
-    additionalFields: {
+    additionalFields?: {
         [key: string]: string
     },
-    additionalLinks: {
+    additionalLinks?: {
         [key: string]: string
     }
 }
@@ -52,10 +52,10 @@ type goodsItem = {
     notes: string,
     onlineSaleUrl?: string
     salesHistory: saleHistoryItem[],
-    additionalFields: {
+    additionalFields?: {
         [key: string]: string
     },
-    additionalLinks: {
+    additionalLinks?: {
         [key: string]: string
     }
 }

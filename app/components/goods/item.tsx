@@ -25,7 +25,7 @@ export default function GoodsItem({ id, p }: { id: string, p: goodsItem }) {
                             </Link>
                         </div>
 
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-5">
                             <div>
                                 <h2 className="text-xl font-bold">基本情報</h2>
                                 <div className="mx-3 mt-2">
@@ -50,6 +50,14 @@ export default function GoodsItem({ id, p }: { id: string, p: goodsItem }) {
                                                 <td>販売開始日</td>
                                                 <td>{p.releaseDate}</td>
                                             </tr>
+                                            {
+                                                p.additionalFields !== undefined ? Object.keys(p.additionalFields).map(e => (
+                                                    <tr>
+                                                        <td>{e}</td>
+                                                        <td>{p.additionalFields?.[e] || "undefined"}</td>
+                                                    </tr>
+                                                )) : <></>
+                                            }
                                         </tbody>
                                     </table>
 
@@ -68,6 +76,19 @@ export default function GoodsItem({ id, p }: { id: string, p: goodsItem }) {
                                 <h2 className="text-xl font-bold">注記</h2>
                                 <div className="mx-3 mt-2">
                                     {p.notes}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2 className="text-xl font-bold">関連リンク</h2>
+                                <div className="mx-3 mt-2">
+                                    <ul className="list-disc ml-6 flex flex-col gap-1">
+                                        {
+                                            p.additionalLinks !== undefined ? Object.keys(p.additionalLinks).map(e => (
+                                                <li key={e}><DLink href={p.additionalLinks?.[e] || "undefined"} target="_blank">{e}</DLink></li>
+                                            )) : <></>
+                                        }
+                                    </ul>
                                 </div>
                             </div>
 

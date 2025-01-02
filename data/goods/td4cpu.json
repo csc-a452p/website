@@ -1,0 +1,40 @@
+{
+    "type": "item",
+    "title": "4bit CPU 製作基板",
+    "releaseDate": "2024-11-09",
+    "description": "4bit CPUの基板です。制作時の注意点をまとめた冊子と、必要な部品の部品表を同梱しています。",
+    "thumbnail": "/assets/goods/td4cpu/image.jpg",
+    "author": {
+        "show": "nikachu2012",
+        "detail": [
+            "s23112"
+        ]
+    },
+    "genre": [
+        "parts"
+    ],
+    "isR18": false,
+    "tags": [
+        "CPU",
+        "基板"
+    ],
+    "price": 500,
+    "priceUnit": "JPY",
+    "notes": "基板のみの販売となります。動作させるためには追加パーツが必要です。",
+    "salesHistory": [
+        {
+            "event": "沼津高専 第59回高専祭",
+            "start": "2024-11-09",
+            "end": "2024-11-10",
+            "revision": 1,
+            "price": 500,
+            "priceUnit": "JPY"
+        }
+    ],
+    "additionalFields": {
+        "key": "value"
+    },
+    "additionalLinks": {
+        "冊子のPDFや部品表": "https://github.com/nikachu2012/td4cpu"
+    }
+}

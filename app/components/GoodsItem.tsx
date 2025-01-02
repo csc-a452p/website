@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DLink from "./DLink";
 
-type Props = {
+type BookProps = {
     title: string,
     author: string,
     detailUrl: string,
@@ -20,7 +20,7 @@ function Sep() {
     return <span className="mx-1 select-none">/</span>
 }
 
-export function GoodsBookItem({ title, author, detailUrl, size, page, cost, costUnit, isdnStr, isdnURL, Ccode, hasEBook, eBookURL }: Props) {
+export function GoodsBookItem({ title, author, detailUrl, size, page, cost, costUnit, isdnStr, isdnURL, Ccode, hasEBook, eBookURL }: BookProps) {
     return <div className="border border-neutral-700 text-wrap ">
         <div className="p-3">
             <div className="font-bold text-xl ">
@@ -43,3 +43,30 @@ export function GoodsBookItem({ title, author, detailUrl, size, page, cost, cost
         </div>
     </div>;
 }
+
+type ItemProps = {
+    title: string,
+    author: string,
+    detailUrl: string,
+    price: number,
+    priceUnit: string,
+    onlineSaleUrl?: string
+}
+
+export function GoodsItemItem({ title, author, detailUrl, price, priceUnit, onlineSaleUrl }: ItemProps) {
+    return <div className="border border-neutral-700 text-wrap ">
+        <div className="p-3">
+            <div className="font-bold text-xl ">
+                <DLink href={detailUrl}>{title}</DLink>
+            </div>
+            <div>
+                <span>{author} 制作</span><Sep />
+                <span>{price} {priceUnit}</span>
+                {onlineSaleUrl !== undefined ? <>
+                    <Sep /><DLink href={onlineSaleUrl || "eBookURL must be filled."} target="_blank">ネット販売あり</DLink>
+                </> : <></>}
+            </div>
+        </div>
+    </div>;
+}
+

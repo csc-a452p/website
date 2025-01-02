@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { GoodsBookItem } from "../components/GoodsItem";
+import { GoodsBookItem, GoodsItemItem } from "../components/GoodsItem";
 import DLink from "../components/DLink";
 import { join, parse } from "path";
 import { readFileSync } from "fs";
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 }
 
 function generateElement(arr: { id: string, goods: goods }[]) {
-    return arr.map(({ id, goods }) =>
-        goods.type == "book"
-            ? <GoodsBookItem
+    return arr.map(({ id, goods }) => {
+        if (goods.type == "book") {
+            return <GoodsBookItem
                 key={id}
                 title={goods.title}
                 author={goods.author.show}
@@ -27,8 +27,21 @@ function generateElement(arr: { id: string, goods: goods }[]) {
                 Ccode={goods.code.cCode}
                 hasEBook={goods.onlineSaleUrl !== undefined}
                 eBookURL={goods.onlineSaleUrl} />
-            : <></>
-    )
+        }
+        else if (goods.type == "item") {
+            return <GoodsItemItem
+                key={id}
+                title={goods.title}
+                author={goods.author.show}
+                detailUrl={`/goods/${id}`}
+                price={goods.price}
+                priceUnit={goods.priceUnit}
+                onlineSaleUrl={goods.onlineSaleUrl} />
+        }
+        else{
+            throw new Error("generateElementに未定義のタイプが渡されました")
+        }
+    })
 }
 
 export default function Home() {

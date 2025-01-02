@@ -1,4 +1,4 @@
-type goods = goodsBook;
+type goods = goodsBook | goodsItem;
 
 type goodsBook = {
     type: "book",
@@ -33,6 +33,33 @@ type goodsBook = {
         [key: string]: string
     }
 }
+
+type goodsItem = {
+    type: "item",
+    title: string,
+    releaseDate: string,
+    description: string,
+    thumbnail: string,
+    author: {
+        show: string,
+        detail?: string[]
+    },
+    genre: string[],
+    tags: string[],
+    isR18: boolean,
+    price: number,
+    priceUnit: string,
+    notes: string,
+    onlineSaleUrl?: string
+    salesHistory: saleHistoryItem[],
+    additionalFields: {
+        [key: string]: string
+    },
+    additionalLinks: {
+        [key: string]: string
+    }
+}
+
 
 type bookCodeISDN = {
     type: "isdn",

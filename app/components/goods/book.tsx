@@ -2,13 +2,11 @@ import Image from "next/image";
 import DLink from "../DLink";
 import { join } from "path";
 import { existsSync } from "fs";
-
-const DATA_DIR = "data"
-
+import { DATA_PATH } from "@/app/utils/dataConst";
 
 export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
     // get errata
-    const isErrataExist = existsSync(join(process.cwd(), DATA_DIR, "errata", id + ".json"))
+    const isErrataExist = existsSync(join(DATA_PATH, "errata", id + ".json"))
 
     return (
         <>

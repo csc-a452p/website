@@ -1,11 +1,8 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import PDFViewer from "../../components/PDFViewer";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import { readFileSync } from "fs";
-import { join, parse } from "path";
-
-
+import { join } from "path";
 
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     const { id } = await params;
 
     const path = join(DATA_PATH, "notes", "list.json");
-    const f = JSON.parse(readFileSync(path, "utf-8"));
+    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
     const title = f[id];
 
     return {
@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
     const path = join(DATA_PATH, "notes", "list.json");
-    const f = JSON.parse(readFileSync(path, "utf-8"));
+    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
     const title = f[id];
-    const pdfPath = "/assets/notes/"+id+".pdf";
+    const pdfPath = "/assets/notes/" + id + ".pdf";
 
     return (
         <>
@@ -36,11 +36,11 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                             <Link href={"/"} className="underline underline-offset-2" >トップ</Link> &gt; &thinsp;
                             <Link href={"/notes"} className="underline underline-offset-2" >雑記</Link>&gt; &thinsp;
                             {title}
-                            </div>
+                        </div>
                     </div>
 
                     <div className="mx-2 flex flex-col gap-3 p-3">
-                        
+
                         {title && (
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-xl font-bold">{title}</h2>

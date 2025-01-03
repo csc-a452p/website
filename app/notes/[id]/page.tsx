@@ -4,6 +4,8 @@ import { DATA_PATH } from "@/app/utils/dataConst";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+export const dynamic = 'force-static';
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;

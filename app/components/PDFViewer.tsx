@@ -57,7 +57,10 @@ const PDFViewer: React.FC<{ pdfUrl: string }> = ({ pdfUrl }) => {
       ) : (
         pages.map((canvas, index) => (
           <div key={index} style={{ marginBottom: "20px" }}>
-            <img src={canvas.toDataURL()} alt={`Page ${index + 1}`} />
+            {
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={canvas.toDataURL()} alt={`Page ${index + 1}`} />
+            }
           </div>
         ))
       )}

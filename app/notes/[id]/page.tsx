@@ -7,6 +7,15 @@ import { join } from "path";
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
+export function generateStaticParams() {
+    const path = join(DATA_PATH, "notes", "list.json");
+    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
+
+    return Object.keys(f).map(e => ({
+        id: e
+    }))
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 

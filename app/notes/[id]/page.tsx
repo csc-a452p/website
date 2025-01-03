@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                         <h1 className="w-full font-bold text-3xl mb-1">{title ? title : "このページは存在しません。"}</h1>
                         <div>
                             <Link href={"/"} className="underline underline-offset-2" >トップ</Link> &gt; &thinsp;
-                            <Link href={"/notes"} className="underline underline-offset-2" >雑記</Link>&gt; &thinsp;
+                            <Link href={"/notes"} className="underline underline-offset-2" >雑記</Link> &gt; &thinsp;
                             {title}
                         </div>
                     </div>

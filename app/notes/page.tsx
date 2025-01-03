@@ -22,6 +22,7 @@ export default function Home() {
                             <h2 className="text-xl font-bold">雑記</h2>
                             <div className="mx-3 flex flex-col gap-2">
                                 <ul className="list-disc ml-5">
+                                    {/* 雑記に記事を追加する場合はdata/notes/list.jsonにidをキー、タイトルを値として書き加えて、public/assets/notesにpdfファイルを追加してください */}
                                     <ListItem href={"/notes/RemoteControlWithSensor"} >スマートフォンのセンサを利用したパソコンの遠隔操作</ListItem>
                                     <ListItem href={"/notes/makeAGirlFriend"} >彼女作るンゴ</ListItem>
                                 </ul>

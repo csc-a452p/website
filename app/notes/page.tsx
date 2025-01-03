@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+
     return (
         <>
             <main className="w-full md:m-auto flex gap-2">
@@ -21,8 +22,8 @@ export default function Home() {
                             <h2 className="text-xl font-bold">雑記</h2>
                             <div className="mx-3 flex flex-col gap-2">
                                 <ul className="list-disc ml-5">
-                                    <ListItem href={"/assets/notes/RemoteControlWithSensor.pdf"} target="_blank">スマートフォンのセンサを利用したパソコンの遠隔操作</ListItem>
-                                    <ListItem href={"/assets/notes/makeAGirlFriend.pdf"} target="_blank">彼女作るンゴ</ListItem>
+                                    <ListItem href={"/notes/RemoteControlWithSensor"} >スマートフォンのセンサを利用したパソコンの遠隔操作</ListItem>
+                                    <ListItem href={"/notes/makeAGirlFriend"} >彼女作るンゴ</ListItem>
                                 </ul>
                             </div>
                         </div>

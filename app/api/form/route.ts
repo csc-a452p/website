@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
                     },
                     {
                         "name": "IPアドレス",
-                        "value": ipaddr || "null",
+                        "value": ipaddr,
                         "inline": false,
                     },
                     {

@@ -1,12 +1,27 @@
 import { Metadata } from "next";
 import NoticeItem from "../components/NoticeItem";
 import DLink from "../components/DLink";
+import { readFileSync } from "fs";
+import { join } from "path";
+import { DATA_PATH } from "../utils/dataConst";
 
 export const metadata: Metadata = {
     title: 'お知らせ',
 }
 
 export default function Home() {
+    const { notice } = JSON.parse(readFileSync(join(DATA_PATH, "notice.json"), "utf-8")) as Notice;
+    notice.sort((a, b) => b.time - a.time);
+
+    const newNotice: NoticeItem[] = [], oldNotice: NoticeItem[] = [];
+
+    notice.forEach(e => {
+        if (e.isNew)
+            newNotice.push(e)
+        else
+            oldNotice.push(e)
+    })
+
     return (
         <>
             <main className="w-full md:m-auto flex gap-2">
@@ -21,19 +36,19 @@ export default function Home() {
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">現在のお知らせ</h2>
                             <ul className="list-disc ml-8 flex flex-col gap-2">
-                                <NoticeItem time={new Date()} author={"nikachu2012"}>どっかでコミケ参加したいね</NoticeItem>
+                                {newNotice.map(e => <NoticeItem key={e.time} time={new Date(e.time)} author={e.author}>{e.content}</NoticeItem>)}
                             </ul>
                         </div>
 
                         <div className="flex flex-col gap-2">
                             <h2 className="text-xl font-bold">過去のお知らせ</h2>
-                            過去のお知らせはありません。
-                            {/* <ul className="list-disc ml-8">
-                                <li>2024-12-31 どっかでコミケ参加したいね (by nikachu)</li>
-                                <li>2024-12-31 どっかでコミケ参加したいね (by nikachu)</li>
-                                <li>2024-12-31 どっかでコミケ参加したいね (by nikachu)</li>
-                                <li>2024-12-31 どっかでコミケ参加したいね (by nikachu)</li>
-                            </ul> */}
+                            {
+                                oldNotice.length
+                                    ? <ul className="list-disc ml-8 flex flex-col gap-2">
+                                        {oldNotice.map(e => <NoticeItem key={e.time} time={new Date(e.time)} author={e.author}>{e.content}</NoticeItem>)}
+                                    </ul>
+                                    : <>過去のお知らせはありません。</>
+                            }
                         </div>
 
                     </div>

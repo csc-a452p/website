@@ -12,5 +12,5 @@ export async function GET() {
     }
 
     const notice = await process.env.csc_notice.get("notice", "json")
-    return notice;
+    return Response.json(notice);
 }

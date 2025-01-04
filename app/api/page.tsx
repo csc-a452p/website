@@ -3,7 +3,7 @@ import Link from "next/link";
 import DLink from "../components/DLink";
 
 export const metadata: Metadata = {
-    title: '雑記',
+    title: 'API',
 }
 
 export default function Home() {

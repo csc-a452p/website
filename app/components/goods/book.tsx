@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DLink from "../DLink";
 import { join } from "path";
 import { existsSync } from "fs";

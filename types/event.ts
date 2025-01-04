@@ -8,14 +8,14 @@ type eventType = {
     start: string,
     end?: string,
     place: string,
-    sell: SellItem[],
-    additionalLink: {
+    sell: eventSellItem[],
+    additionalLinks: {
         [key: string]: string
     },
     willPart: boolean
 }
 
-type SellItem = {
+type eventSellItem = {
     isNewly: boolean,
     name: string,
     id: string,

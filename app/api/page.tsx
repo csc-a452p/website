@@ -98,7 +98,7 @@ export default function Home() {
                                         <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
                                             <tr>
                                                 <td><code>[key: string]</code></td>
-                                                <td><code>errataItem[]</code></td>
+                                                <td><code><DLink href="#type_errataItem">errataItem</DLink>[]</code></td>
                                                 <td>版ごとの正誤情報</td>
                                             </tr>
                                         </tbody>
@@ -191,7 +191,7 @@ export default function Home() {
                                             </tr>
                                             <tr>
                                                 <td><code>sell</code></td>
-                                                <td><code>eventSellItem[]</code></td>
+                                                <td><code><DLink href="#type_eventSellItem">eventSellItem</DLink>[]</code></td>
                                                 <td>販売品の配列</td>
                                             </tr>
 
@@ -302,7 +302,7 @@ export default function Home() {
                                             </tr>
                                             <tr>
                                                 <td><code>code</code></td>
-                                                <td><code>bookCodeISDN</code></td>
+                                                <td><code><DLink href="#type_bookCodeISDN">bookCodeISDN</DLink></code></td>
                                                 <td>書籍についたコード(ISDNなど)</td>
                                             </tr>
                                             <tr>
@@ -382,13 +382,13 @@ export default function Home() {
 
                                             <tr>
                                                 <td><code>salesHistory</code></td>
-                                                <td><code>salesHistoryItem[]</code></td>
+                                                <td><code><DLink href="#type_salesHistoryItem">salesHistoryItem</DLink>[]</code></td>
                                                 <td>販売履歴</td>
                                             </tr>
 
                                             <tr>
                                                 <td><code>revisionHistory</code></td>
-                                                <td><code>revisionHistoryItem[]</code></td>
+                                                <td><code><DLink href="#type_revisionHistoryItem">revisionHistoryItem</DLink>[]</code></td>
                                                 <td>改版履歴</td>
                                             </tr>
 
@@ -504,7 +504,7 @@ export default function Home() {
 
                                             <tr>
                                                 <td><code>salesHistory</code></td>
-                                                <td><code>salesHistoryItem[]</code></td>
+                                                <td><code><DLink href="#type_salesHistoryItem">salesHistoryItem</DLink>[]</code></td>
                                                 <td>販売履歴</td>
                                             </tr>
 

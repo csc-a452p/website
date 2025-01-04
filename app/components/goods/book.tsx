@@ -3,7 +3,7 @@ import DLink from "../DLink";
 import { join } from "path";
 import { existsSync } from "fs";
 import { DATA_PATH } from "@/app/utils/dataConst";
-import Link from "next/link";
+import ImagePopup from "../ImagePopup";
 
 export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
     // get errata
@@ -20,9 +20,7 @@ export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
 
                     <div className="mx-2 flex flex-col gap-2 p-3">
                         <div className="flex justify-center">
-                            <Link href={p.thumbnail}>
-                                <Image src={p.thumbnail} width={300} height={500} alt={`${p.title}の表紙`} className="border border-neutral-700 object-contain" />
-                            </Link>
+                            <ImagePopup src={p.thumbnail} width={300} height={500} alt={`${p.title}の表紙`} className="border border-neutral-700 object-contain" />
                         </div>
 
                         <div className="flex flex-col gap-5">

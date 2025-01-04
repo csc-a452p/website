@@ -32,6 +32,7 @@ export default function Home() {
                                     <li><DLink href="#GET /data/goods/{goodsID}.json"><code>{`GET /data/goods/{goodsID}.json`}</code></DLink></li>
                                     <li><DLink href="#GET /data/goods_newly.json"><code>{`GET /data/goods_newly.json`}</code></DLink></li>
                                     <li><DLink href="#GET /data/notes/list.json"><code>{`GET /data/notes/list.json`}</code></DLink></li>
+                                    <li><DLink href="#GET /data/notice.json"><code>{`GET /data/notice.json`}</code></DLink></li>
                                 </ul>
                             </div>
 
@@ -43,6 +44,7 @@ export default function Home() {
                                     <li><DLink href="#type_bookCodeISDN"><code>bookCodeISDN</code></DLink></li>
                                     <li><DLink href="#type_salesHistoryItem"><code>salesHistoryItem</code></DLink></li>
                                     <li><DLink href="#type_revisionHistoryItem"><code>revisionHistoryItem</code></DLink></li>
+                                    <li><DLink href="#type_noticeItem"><code>noticeItem</code></DLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -592,6 +594,39 @@ export default function Home() {
                             </div>
                         </div>
 
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-xl font-bold" id="GET /data/notice.json"><code>GET /data/notice.json</code></h2>
+                            <div className="mx-3 flex flex-col gap-2">
+                                <div>
+                                    お知らせのリストを返します。
+                                </div>
+
+                                <div className="border border-neutral-700 p-2 flex flex-col gap-2">
+                                    <div className="font-bold text-sm">JSON Response</div>
+                                    <table className="border-collapse border border-neutral-700">
+                                        <thead className="[&_th]:border [&_th]:border-neutral-700 [&_th]:p-1 [&_th]:px-2">
+                                            <tr>
+                                                <th>key</th>
+                                                <th>type</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
+                                            <tr>
+                                                <td><code>notice</code></td>
+                                                <td><code><DLink href="#type_noticeItem">noticeItem</DLink>[]</code></td>
+                                                <td>お知らせのリスト</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div>
+                                        <DLink href="/data/notice.json" target="_blank">サンプル</DLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <hr className="border border-neutral-700 mt-2" />
 
                         <div className="flex flex-col gap-2">
@@ -824,6 +859,49 @@ export default function Home() {
                             </div>
                         </div>
 
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-xl font-bold" id="type_noticeItem"><code>noticeItem</code></h2>
+                            <div className="mx-3 flex flex-col gap-2">
+                                お知らせの各データです。
+
+                                <div className="border border-neutral-700 p-2 flex flex-col gap-2">
+                                    <div className="font-bold text-sm">Object Type</div>
+                                    <table className="border-collapse border border-neutral-700">
+                                        <thead className="[&_th]:border [&_th]:border-neutral-700 [&_th]:p-1 [&_th]:px-2">
+                                            <tr>
+                                                <th>key</th>
+                                                <th>type</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
+                                            <tr>
+                                                <td><code>time</code></td>
+                                                <td><code>number</code></td>
+                                                <td>ECMAScript 元期*からの経過<strong className="text-red-600">ミリ</strong>秒数</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>content</code></td>
+                                                <td><code>string</code></td>
+                                                <td>お知らせの中身</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>author</code></td>
+                                                <td><code>string</code></td>
+                                                <td>お知らせの投稿者名</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>isNew</code></td>
+                                                <td><code>string</code></td>
+                                                <td>現在のお知らせかどうか(=トップページに表示されるか)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                *ECMAScript 元期= 1970-01-01 午前00:00
+                            </div>
+                        </div>
 
                     </div>
                 </div>

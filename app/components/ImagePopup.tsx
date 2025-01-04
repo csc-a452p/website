@@ -79,8 +79,8 @@ const ImagePopup: React.FC<ImagePopupProps> = ({
             <Image
               src={src}
               alt={alt}
-              width={width}
-              height={height}
+              width={width? width*2: undefined}
+              height={height? height*2: undefined}
               layout={layout}
               quality={quality}
               priority={priority}

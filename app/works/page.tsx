@@ -27,6 +27,13 @@ export default function Home() {
                                     title="沼津高専学生便覧HTML版"
                                     description="R5年度の学生便覧の一部をHTMLに書き起こしました。この取り組みは学校公式のものになる可能性があります。"
                                 />
+                                <WorkItem
+                                    thumbnail="/assets/works/bveTrainsimByToukaitetudou/bettersignal.png"
+                                    link="https://toukaitetudou.hatenablog.com/entry/BVE/"
+                                    external={true}
+                                    title="Bveプラグイン類"
+                                    description="Toukaitetudouがこれまで個人的に作成してきたBveプラグイン類の一部を公開しています。尚、作成当時のまま最新の情報に更新されていないものもございます。予めご了承ください。"
+                                />
                             </div>
                         </div>
 

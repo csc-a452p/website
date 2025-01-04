@@ -2,7 +2,7 @@ import ImagePopup from "./ImagePopup";
 
 type Props = {
     target: string,
-    errata: ErrataItem[]
+    errata: errataItem[]
 }
 
 export default function ErrataItem({ target, errata }: Props) {

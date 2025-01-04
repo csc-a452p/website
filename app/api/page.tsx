@@ -38,7 +38,7 @@ export default function Home() {
                             <h2 className="text-xl font-bold"><code>目次(型)</code></h2>
                             <div className="mx-3 flex flex-col gap-2">
                                 <ul className="list-disc ml-5">
-                                    <li><DLink href="#type_ErrataItem"><code>ErrataItem</code></DLink></li>
+                                    <li><DLink href="#type_errataItem"><code>errataItem</code></DLink></li>
                                     <li><DLink href="#type_eventSellItem"><code>eventSellItem</code></DLink></li>
                                     <li><DLink href="#type_bookCodeISDN"><code>bookCodeISDN</code></DLink></li>
                                     <li><DLink href="#type_salesHistoryItem"><code>salesHistoryItem</code></DLink></li>
@@ -96,7 +96,7 @@ export default function Home() {
                                         <tbody className="[&_td]:border [&_td]:border-neutral-700 [&_td]:p-1 [&_td]:px-2">
                                             <tr>
                                                 <td><code>[key: string]</code></td>
-                                                <td><code>ErrataItem[]</code></td>
+                                                <td><code>errataItem[]</code></td>
                                                 <td>版ごとの正誤情報</td>
                                             </tr>
                                         </tbody>
@@ -595,7 +595,7 @@ export default function Home() {
                         <hr className="border border-neutral-700 mt-2" />
 
                         <div className="flex flex-col gap-2">
-                            <h2 className="text-xl font-bold" id="type_ErrataItem"><code>ErrataItem</code></h2>
+                            <h2 className="text-xl font-bold" id="type_errataItem"><code>errataItem</code></h2>
                             <div className="mx-3 flex flex-col gap-2">
                                 正誤情報の各データです。画像か文字列どちらかは必ず存在しますが、画像がある場合は画像を優先してください。
 

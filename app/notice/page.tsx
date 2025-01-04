@@ -13,7 +13,7 @@ export default function Home() {
     const { notice } = JSON.parse(readFileSync(join(DATA_PATH, "notice.json"), "utf-8")) as Notice;
     notice.sort((a, b) => b.time - a.time);
 
-    const newNotice: NoticeItem[] = [], oldNotice: NoticeItem[] = [];
+    const newNotice: noticeItem[] = [], oldNotice: noticeItem[] = [];
 
     notice.forEach(e => {
         if (e.isNew)

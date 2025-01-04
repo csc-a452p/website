@@ -1,8 +1,8 @@
 type Errata = {
-    [revision: string]: ErrataItem[]
+    [revision: string]: errataItem[]
 }
 
-type ErrataItem = {
+type errataItem = {
     at: string,
     wrong?: string,
     correct?: string,

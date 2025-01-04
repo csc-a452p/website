@@ -1,9 +1,9 @@
 type Notice = {
-    notice: NoticeItem[]
+    notice: noticeItem[]
 }
 
 
-type NoticeItem = {
+type noticeItem = {
     time: number,
     content: string,
     author: string,

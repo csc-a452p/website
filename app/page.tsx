@@ -2,16 +2,10 @@ import { Section } from "./components/section";
 import ListItem from "./components/ListItem";
 import { TwitterFollowButton } from "./components/TwitterEmbed";
 import NoticeItem from "./components/NoticeItem";
-import { Metadata } from "next";
 import DLink from "./components/DLink";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { DATA_PATH } from "./utils/dataConst";
-
-export const metadata: Metadata = {
-    title: "トップページ"
-};
-
 
 export default function Home() {
     const { notice } = JSON.parse(readFileSync(join(DATA_PATH, "notice.json"), "utf-8")) as Notice;

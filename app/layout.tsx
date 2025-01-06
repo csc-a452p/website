@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     default: "情報工学同好会 (非公認)"
   },
   description: "高専生によって作られた同人グループ「沼津高専 情報工学同好会 (非公認)」の公式サイトです",
+  authors: []
 };
 
 export default function RootLayout({

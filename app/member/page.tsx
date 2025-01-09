@@ -40,6 +40,15 @@ export default function Home() {
                             コーディングはすべてを解決する
                         </MemberItem>
                         <MemberItem
+                            name={"ujiuji (s23125)"}
+                            link={{
+                                "Twitter": "https://twitter.com/ujiuji0214",
+                                "GitHub": "https://github.com/djiko0814"
+                            }}
+                        >
+                            ぬこ派
+                        </MemberItem>
+                        <MemberItem
                             name={"npnp (s23131)"}
                             link={{
                                 "Twitter": "https://twitter.com/css_py",
@@ -50,15 +59,6 @@ export default function Home() {
                             }}
                         >
                             エレファント解法こそすべて
-                        </MemberItem>
-                        <MemberItem
-                            name={"ujiuji (s23125)"}
-                            link={{
-                                "Twitter": "https://twitter.com/ujiuji0214",
-                                "GitHub": "https://github.com/djiko0814"
-                            }}
-                        >
-                            ぬこ派
                         </MemberItem>
                     </div>
                 </div>

@@ -37,7 +37,7 @@ export default function Home() {
                             : <div>現在、お知らせはありません。</div>}
 
                         <div className="">
-                            <DLink href={"/"} target="_blank">過去のお知らせ</DLink>
+                            <DLink href={"/notice"}>過去のお知らせ</DLink>
                         </div>
                     </Section>
                 </div>

@@ -5,7 +5,7 @@ export function Section({ title, children, className }: { title: ReactNode, chil
         <h2 className="w-full font-bold text-xl mb-2">
             {title}
         </h2>
-        <div className="ml-2 mt-1">
+        <div className="ml-2 mt-1 flex flex-col gap-3">
             {children}
         </div>
     </div>

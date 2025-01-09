@@ -26,19 +26,17 @@ export default function Home() {
                         沼津高専の学生が、情報技術を用いていろいろやってます。<br />
                         同人誌「ンゴシリーズ」を制作しています。2024年末現在、高専とは一切関係ない団体です。
 
-                        <div className="mt-3">
-                            <TwitterFollowButton id="csc_a452p" />
-                        </div>
+                        <TwitterFollowButton id="csc_a452p" />
                     </Section>
 
                     <Section title={"お知らせ"}>
                         {newNotice.length
-                            ? <ul className="list-disc ml-8 my-3">
+                            ? <ul className="list-disc ml-8">
                                 {newNotice.map(e => <NoticeItem key={e.time} time={new Date(e.time)} author={e.author}>{e.content}</NoticeItem>)}
                             </ul>
                             : <div>現在、お知らせはありません。</div>}
 
-                        <div className="mt-2">
+                        <div className="">
                             <DLink href={"/"} target="_blank">過去のお知らせ</DLink>
                         </div>
                     </Section>

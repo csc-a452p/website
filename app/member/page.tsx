@@ -51,6 +51,15 @@ export default function Home() {
                         >
                             エレファント解法こそすべて
                         </MemberItem>
+                        <MemberItem
+                            name={"ujiuji (s23125)"}
+                            link={{
+                                "Twitter": "https://twitter.com/ujiuji0214",
+                                "GitHub": "https://github.com/djiko0814"
+                            }}
+                        >
+                            ぬこ派
+                        </MemberItem>
                     </div>
                 </div>
             </main>

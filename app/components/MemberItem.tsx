@@ -12,7 +12,7 @@ export default function MemberItem({ name, link, children }: { name: string, lin
             <span className="mr-2 select-none">[</span>
             {
                 Object.keys(link).map((e, i) => {
-                    return <DLink key={i} href={link[e]} className="mr-2" target="_blank">{e}</DLink>
+                    return <><DLink key={i} href={link[e]} className="mr-2" target="_blank">{e}</DLink><wbr /></>
                 })
             }
             <span>]</span>

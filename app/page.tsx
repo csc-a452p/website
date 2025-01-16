@@ -5,7 +5,9 @@ import NoticeItem from "./components/NoticeItem";
 import DLink from "./components/DLink";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { DATA_PATH } from "./utils/dataConst";
+import { DATA_PATH } from "./utils/dataConst"
+import HeaderImage from "./header.png";
+import Image from "next/image";
 
 export default function Home() {
     const { notice } = JSON.parse(readFileSync(join(DATA_PATH, "notice.json"), "utf-8")) as Notice;
@@ -23,6 +25,8 @@ export default function Home() {
             <main className="md:m-auto flex gap-2 flex-wrap flex-col md:flex-nowrap md:flex-row">
                 <div className="flex-[3] items-stretch flex flex-col gap-2">
                     <Section title={"情報工学同好会とは？"}>
+                        <Image src={HeaderImage} alt={"ヘッダ画像"} className="bg-white" />
+
                         沼津高専の学生が、情報技術を用いていろいろやってます。<br />
                         同人誌「ンゴシリーズ」を制作しています。2024年末現在、高専とは一切関係ない団体です。
 

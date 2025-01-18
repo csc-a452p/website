@@ -52,12 +52,12 @@ export default function Home() {
                             <ListItem href={"goods"}>販売品一覧</ListItem>
                             <ListItem href={"works"}>制作物一覧</ListItem>
                             <ListItem href={"errata"}>正誤情報</ListItem>
-                            <ListItem href={"notes"}>雑記</ListItem>
+                            <ListItem href={"pdflib"}>PDFライブラリ</ListItem>
                             <ListItem href={"event"}>イベント参加歴</ListItem>
                             <ListItem href={"member"}>メンバー紹介</ListItem>
                             <ListItem href={"sns"}>各種SNS</ListItem>
                             <ListItem href={"contact"}>問い合わせ</ListItem>
-                            <ListItem href={"api"}>API</ListItem>
+                            <ListItem href={"api.html"}>API</ListItem>
                         </ul>
                     </Section>
                 </div>

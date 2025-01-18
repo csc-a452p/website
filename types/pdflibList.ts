@@ -1,3 +1,3 @@
-type notesList = {
+type pdflibList = {
     [key: string]: string
 }

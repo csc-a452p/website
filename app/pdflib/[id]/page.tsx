@@ -8,8 +8,8 @@ export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-    const path = join(DATA_PATH, "notes", "list.json");
-    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
+    const path = join(DATA_PATH, "pdflib", "list.json");
+    const f: pdflibList = JSON.parse(readFileSync(path, "utf-8"));
 
     return Object.keys(f).map(e => ({
         id: e
@@ -19,8 +19,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
-    const path = join(DATA_PATH, "notes", "list.json");
-    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
+    const path = join(DATA_PATH, "pdflib", "list.json");
+    const f: pdflibList = JSON.parse(readFileSync(path, "utf-8"));
     const title = f[id];
 
     return {
@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
-    const path = join(DATA_PATH, "notes", "list.json");
-    const f: notesList = JSON.parse(readFileSync(path, "utf-8"));
+    const path = join(DATA_PATH, "pdflib", "list.json");
+    const f: pdflibList = JSON.parse(readFileSync(path, "utf-8"));
     const title = f[id];
-    const pdfPath = "/assets/notes/" + id + ".pdf";
+    const pdfPath = "/assets/pdflib/" + id + ".pdf";
 
     return (
         <>
@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                         <h1 className="w-full font-bold text-3xl mb-1">{title ? title : "このページは存在しません。"}</h1>
                         <div>
                             <Link href={"/"} className="underline underline-offset-2" >トップ</Link> &gt; &thinsp;
-                            <Link href={"/notes"} className="underline underline-offset-2" >雑記</Link> &gt; &thinsp;
+                            <Link href={"/pdflib"} className="underline underline-offset-2" >PDFライブラリ</Link> &gt; &thinsp;
                             {title}
                         </div>
                     </div>

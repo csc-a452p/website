@@ -1,12 +1,17 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import ListItem from "../components/ListItem";
+import { join } from "path";
+import { DATA_PATH } from "../utils/dataConst";
+import { readFileSync } from "fs";
 
 export const metadata: Metadata = {
     title: 'PDFライブラリ',
 }
 
 export default function Home() {
+    const path = join(DATA_PATH, "pdflib", "list.json");
+    const f: pdflibList = JSON.parse(readFileSync(path, "utf-8"));
 
     return (
         <>
@@ -23,8 +28,9 @@ export default function Home() {
                             <div className="mx-3 flex flex-col gap-2">
                                 <ul className="list-disc ml-5">
                                     {/* 雑記に記事を追加する場合はdata/pdflib/list.jsonにidをキー、タイトルを値として書き加えて、public/assets/pdflib/にpdfファイルを追加してください */}
-                                    <ListItem href={"/pdflib/RemoteControlWithSensor"} >スマートフォンのセンサを利用したパソコンの遠隔操作</ListItem>
-                                    <ListItem href={"/pdflib/makeAGirlFriend"} >彼女作るンゴ</ListItem>
+                                    {Object.keys(f).map((e) => (
+                                        <ListItem href={"/pdflib/" + e} key={e}>{f[e]}</ListItem>
+                                    ))}
                                 </ul>
                             </div>
                         </div>

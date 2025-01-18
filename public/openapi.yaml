@@ -220,13 +220,13 @@ paths:
                   mapping:
                     book: "#/components/schemas/goodsBook"
                     item: "#/components/schemas/goodsItem"
-  /data/notes/list.json:
+  /data/pdflib/list.json:
     summary: PDFライブラリのリストを取得
     get:
       summary: PDFライブラリのリストを取得
       description: |
         PDFライブラリの一覧を取得できます。
-        実際のPDFファイルは/assets/pdflib/{pdflibID}.pdfにあります。
+        実際のPDFファイルは`/assets/pdflib/{pdflibID}.pdf`にあります。
       operationId: getPdflibList
       tags:
         - pdflib

@@ -9,7 +9,7 @@ type eventType = {
     end?: string,
     place: string,
     sell: eventSellItem[],
-    additionalLinks: {
+    additionalLinks?: {
         [key: string]: string
     },
     willPart: boolean

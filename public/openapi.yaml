@@ -369,6 +369,12 @@ components:
                 $ref: "#/components/schemas/price"
               priceUnit:
                 $ref: "#/components/schemas/priceUnit"
+              barcode:
+                type: array
+                description: 商品読み取り用のバーコードの一覧 同商品でもイベントごとに別の値の場合があります
+                items: 
+                  type: string
+                  example: "2784874194017"
         additionalLinks:
           type: object
           description: キーにはリンク名称が入ります

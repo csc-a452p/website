@@ -20,5 +20,6 @@ type eventSellItem = {
     name: string,
     id: string,
     price: number,
-    priceUnit: string
+    priceUnit: string,
+    barcode?: string[],
 }

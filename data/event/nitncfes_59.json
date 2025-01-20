@@ -13,6 +13,17 @@
             "name": "ンゴシリーズ vol.1",
             "id": "ngo_vol1",
             "price": 500,
+            "priceUnit": "JPY",
+            "barcode": [
+                "2784874194017",
+                "2923455005001"
+            ]
+        },
+        {
+            "isNewly": true,
+            "name": "4bit CPU 製作基板",
+            "id": "td4cpu",
+            "price": 500,
             "priceUnit": "JPY"
         }
     ],

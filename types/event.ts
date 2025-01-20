@@ -6,7 +6,7 @@ type eventType = {
         count: number
     },
     start: string,
-    end?: string,
+    end: string,
     place: string,
     sell: eventSellItem[],
     additionalLinks?: {

@@ -60,6 +60,19 @@ export default function Home() {
                         >
                             エレファント解法こそすべて
                         </MemberItem>
+                        <MemberItem
+                            name={"小野さん (s23113)"}
+                            link={{
+                                "Twitter": "https://x.com/decre_entropy",
+                                "GitHub":"https://github.com/Ono1020"
+                                // "Instagram": "https://instagram.com/nikachu2012",
+                                // "Portfolio": "https://portfolio.nikachu.net",
+                                // "GPG Public Key": "https://portfolio.nikachu.net/publickey"
+                            }}
+                        >
+                            さん付けは距離感あるって人もいるけど、英語みたいな距離感だと解釈すれば
+                            私のほうが目上ってことになるのでどうぞさん付けで呼んでください
+                        </MemberItem>
                     </div>
                 </div>
             </main>

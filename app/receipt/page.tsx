@@ -34,7 +34,7 @@ export type ServerReceipt = {
 }
 
 
-export default async function ReceiptPage({ searchParams }: { searchParams: { token: string } }) {
+export default async function ReceiptPage({ searchParams }: { searchParams: Promise<{token: string}> }) {
     const { token } = await searchParams
 
     if (token == null) {

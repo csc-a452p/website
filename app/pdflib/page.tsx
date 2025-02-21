@@ -4,6 +4,7 @@ import ListItem from "../components/ListItem";
 import { join } from "path";
 import { DATA_PATH } from "../utils/dataConst";
 import { readFileSync } from "fs";
+import { pdflibList } from "@/types/pdflibList";
 
 export const metadata: Metadata = {
     title: 'PDFライブラリ',

@@ -1,6 +1,6 @@
-type goods = goodsBook | goodsItem;
+export type goods = goodsBook | goodsItem;
 
-type goodsBook = {
+export type goodsBook = {
     type: "book",
     title: string,
     series: string,
@@ -34,7 +34,7 @@ type goodsBook = {
     }
 }
 
-type goodsItem = {
+export type goodsItem = {
     type: "item",
     title: string,
     releaseDate: string,
@@ -61,14 +61,14 @@ type goodsItem = {
 }
 
 
-type bookCodeISDN = {
+export type bookCodeISDN = {
     type: "isdn",
     isdn: string,
     cCode: string,
     url: string, // ベースURLからの相対パス
 }
 
-type saleHistoryItem = {
+export type saleHistoryItem = {
     event: string,
     start: string,
     end?: string,
@@ -77,7 +77,7 @@ type saleHistoryItem = {
     priceUnit: string
 }
 
-type revisionHistoryItem = {
+export type revisionHistoryItem = {
     revision: number,
     print: number,
     releaseDate: string,

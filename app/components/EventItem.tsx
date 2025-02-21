@@ -1,3 +1,4 @@
+import { eventType } from "@/types/event";
 import DLink from "./DLink";
 
 

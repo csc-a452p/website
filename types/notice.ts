@@ -1,9 +1,9 @@
-type Notice = {
+export type Notice = {
     notice: noticeItem[]
 }
 
 
-type noticeItem = {
+export type noticeItem = {
     time: number,
     content: string,
     author: string,

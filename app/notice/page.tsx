@@ -4,6 +4,7 @@ import DLink from "../components/DLink";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { DATA_PATH } from "../utils/dataConst";
+import { Notice, noticeItem } from "@/types/notice";
 
 export const metadata: Metadata = {
     title: 'お知らせ',

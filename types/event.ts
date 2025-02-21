@@ -1,5 +1,5 @@
 
-type eventType = {
+export type eventType = {
     name: {
         full: string,
         name: string,
@@ -15,7 +15,7 @@ type eventType = {
     willPart: boolean
 }
 
-type eventSellItem = {
+export type eventSellItem = {
     isNewly: boolean,
     name: string,
     id: string,

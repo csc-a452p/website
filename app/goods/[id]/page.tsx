@@ -2,6 +2,7 @@ import GoodsBook from "@/app/components/goods/book";
 import GoodsItem from "@/app/components/goods/item";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import { listFiles } from "@/app/utils/listFiles";
+import { goods } from "@/types/goods";
 import { readFileSync } from "fs";
 import { join, parse } from "path";
 

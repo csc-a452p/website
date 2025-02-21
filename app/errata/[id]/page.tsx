@@ -2,6 +2,8 @@ import DLink from "@/app/components/DLink";
 import ErrataItem from "@/app/components/ErrataItem";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import { listFiles } from "@/app/utils/listFiles";
+import { Errata } from "@/types/errata";
+import { goods } from "@/types/goods";
 import { readFileSync } from "fs";
 import { join, parse } from "path";
 

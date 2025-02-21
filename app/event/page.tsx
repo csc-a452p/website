@@ -5,6 +5,7 @@ import { DATA_PATH } from "../utils/dataConst";
 import { join } from "path";
 import { readFileSync } from "fs";
 import EventItem from "../components/EventItem";
+import { eventType } from "@/types/event";
 
 export const metadata: Metadata = {
     title: 'イベント参加',

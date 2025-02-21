@@ -8,6 +8,7 @@ import { join } from "path";
 import { DATA_PATH } from "./utils/dataConst"
 import HeaderImage from "./header.png";
 import Image from "next/image";
+import { Notice, noticeItem } from "@/types/notice";
 
 export default function Home() {
     const { notice } = JSON.parse(readFileSync(join(DATA_PATH, "notice.json"), "utf-8")) as Notice;

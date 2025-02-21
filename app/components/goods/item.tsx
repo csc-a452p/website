@@ -3,6 +3,7 @@ import { join } from "path";
 import { existsSync } from "fs";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import ImagePopup from "../ImagePopup";
+import { goodsItem } from "@/types/goods";
 
 export default function GoodsItem({ id, p }: { id: string, p: goodsItem }) {
     // get errata

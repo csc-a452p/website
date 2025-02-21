@@ -1,3 +1,3 @@
-type pdflibList = {
+export type pdflibList = {
     [key: string]: string
 }

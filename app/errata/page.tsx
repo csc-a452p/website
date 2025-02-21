@@ -4,6 +4,8 @@ import { listFiles } from "../utils/listFiles";
 import { join, parse } from "path";
 import { cwd } from "process";
 import { readFileSync } from "fs";
+import { goods as goodsType } from "@/types/goods";
+import { Errata } from "@/types/errata";
 
 export const metadata: Metadata = {
     title: '正誤情報',
@@ -15,7 +17,7 @@ export default function Home() {
     const wrongIdList = errataList.map(e => {
         const id = parse(e).name;
 
-        const goods = JSON.parse(readFileSync(join(cwd(), "data", "goods", id + ".json"), "utf-8")) as goods;
+        const goods = JSON.parse(readFileSync(join(cwd(), "data", "goods", id + ".json"), "utf-8")) as goodsType;
         const errata = JSON.parse(readFileSync(join(cwd(), "data", "errata", id + ".json"), "utf-8")) as Errata;
         
         const hanList = Object.keys(errata).map(e => e == "1" ? "初版": `第${e}版`);

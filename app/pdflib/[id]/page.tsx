@@ -3,6 +3,7 @@ import PDFViewer from "../../components/PDFViewer";
 import { DATA_PATH } from "@/app/utils/dataConst";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { pdflibList } from "@/types/pdflibList";
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;

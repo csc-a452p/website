@@ -5,6 +5,7 @@ import { join, parse } from "path";
 import { readFileSync } from "fs";
 import { listFiles } from "../utils/listFiles";
 import { DATA_PATH, NEWLY_GOODS_PATH } from "../utils/dataConst";
+import { goods } from "@/types/goods";
 
 export const metadata: Metadata = {
     title: '販売品一覧',

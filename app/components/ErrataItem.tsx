@@ -1,3 +1,4 @@
+import { errataItem } from "@/types/errata";
 import ImagePopup from "./ImagePopup";
 
 type Props = {

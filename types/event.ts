@@ -21,5 +21,6 @@ export type eventSellItem = {
     id: string,
     price: number,
     priceUnit: string,
+    taxRate: string,
     barcode?: string[],
 }

@@ -14,6 +14,7 @@
             "id": "ngo_vol1",
             "price": 500,
             "priceUnit": "JPY",
+            "taxRate": 0.1,
             "barcode": [
                 "2784874194017",
                 "2923455005001"
@@ -24,7 +25,8 @@
             "name": "4bit CPU 製作基板",
             "id": "td4cpu",
             "price": 500,
-            "priceUnit": "JPY"
+            "priceUnit": "JPY",
+            "taxRate": 0.1
         }
     ],
     "additionalLink": {

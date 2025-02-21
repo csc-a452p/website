@@ -4,6 +4,7 @@ info:
   description: |-
     このAPIは無保証で提供され、突然API仕様が変更される可能性があります。あらかじめご了承ください。  
     ほとんど静的ファイルを返してるだけです。
+    yaml版のOpenAPI仕様は(https://csc.nikachu.net/openapi.yaml)[https://csc.nikachu.net/openapi.yaml]にあります。
   version: "1.0"
 servers:
   - url: https://csc.nikachu.net
@@ -369,6 +370,8 @@ components:
                 $ref: "#/components/schemas/price"
               priceUnit:
                 $ref: "#/components/schemas/priceUnit"
+              taxRate:
+                $ref: "#/components/schemas/taxRate"
               barcode:
                 type: array
                 description: 商品読み取り用のバーコードの一覧 同商品でもイベントごとに別の値の場合があります
@@ -820,3 +823,12 @@ components:
       maxLength: 3
       minLength: 3
       example: "JPY"
+
+    taxRate:
+      type: number
+      format: double
+      description: |
+        イベント開催時点での消費税の税率
+        軽減税率が適用される場合は軽減税率の値になります
+      example: 0.10
+

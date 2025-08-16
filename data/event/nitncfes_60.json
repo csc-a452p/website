@@ -1,0 +1,28 @@
+{
+    "name": {
+        "full": "沼津高専 第60回高専祭",
+        "name": "沼津高専 高専祭",
+        "count": 60
+    },
+    "start": "2024-11-08",
+    "end": "2024-11-09",
+    "place": "講義棟1F 専攻科101(内線番号2671), 専攻科102",
+    "sell": [
+        {
+            "isNewly": false,
+            "name": "ンゴシリーズ vol.1",
+            "id": "ngo_vol1",
+            "price": 500,
+            "priceUnit": "JPY",
+            "taxRate": 0.1,
+            "barcode": [
+                "2784874194017",
+                "2923455005001"
+            ]
+        }
+    ],
+    "additionalLink": {
+        "key": "value"
+    },
+    "willPart": true
+}

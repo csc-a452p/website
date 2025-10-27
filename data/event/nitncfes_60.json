@@ -9,6 +9,18 @@
     "place": "講義棟1F 専攻科101(内線番号2671), 専攻科102",
     "sell": [
         {
+            "isNewly": true,
+            "name": "ンゴシリーズ vol.2",
+            "id": "ngo_vol1",
+            "price": 500,
+            "priceUnit": "JPY",
+            "taxRate": 0.1,
+            "barcode": [
+                "2784874194024",
+                "2923455005001"
+            ]
+        },
+        {
             "isNewly": false,
             "name": "ンゴシリーズ vol.1",
             "id": "ngo_vol1",
@@ -19,6 +31,30 @@
                 "2784874194017",
                 "2923455005001"
             ]
+        },
+        {
+            "isNewly": false,
+            "name": "【委託】Arduinoで始めるアセンブリ",
+            "id": "https://nikatech.nikachu.net/item/avrasm",
+            "price": 500,
+            "priceUnit": "JPY",
+            "taxRate": 0.1
+        },
+        {
+            "isNewly": false,
+            "name": "【委託】スマートリモコン自作ガイド",
+            "id": "https://nikatech.nikachu.net/item/smartremote_guide",
+            "price": 500,
+            "priceUnit": "JPY",
+            "taxRate": 0.1
+        },
+        {
+            "isNewly": false,
+            "name": "【委託】LLVMで始めるプログラミング言語",
+            "id": "https://nikatech.nikachu.net/item/llvm_homebrew_lang",
+            "price": 1500,
+            "priceUnit": "JPY",
+            "taxRate": 0.1
         }
     ],
     "additionalLink": {

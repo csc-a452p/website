@@ -52,7 +52,7 @@ export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
                                             </tr>
                                             <tr>
                                                 <td>ページ数</td>
-                                                <td>{p.pages}ページ (表紙込)</td>
+                                                <td>{p.pages}ページ (表1～表4含む)</td>
                                             </tr>
                                             <tr>
                                                 <td>販売価格</td>

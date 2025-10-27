@@ -22,7 +22,7 @@ export default function EventItem({ event }: { event: eventType }) {
                     {event.sell.map(e => (
                         <tr key={e.name}>
                             <td>{e.isNewly ? "新刊" : "既刊"}</td>
-                            <td><DLink href={`/goods/${e.id}`}>{e.name}</DLink></td>
+                            <td><DLink href={e.id.startsWith("https://") ? e.id : `/goods/${e.id}`}>{e.name}</DLink></td>
                             <td>{e.price} {e.priceUnit}</td>
                         </tr>
                     ))}

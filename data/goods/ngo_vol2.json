@@ -1,0 +1,75 @@
+{
+    "type": "book",
+    "title": "ンゴシリーズ vol.2",
+    "series": "ンゴシリーズ",
+    "vol": 1,
+    "releaseDate": "2024-11-01",
+    "description": "高専生が、情報や数理系のジャンルでまとめたいと思ったことをまとめる「ンゴシリーズ」のvol.2です。",
+    "thumbnail": "/assets/goods/ngo_vol2/front.png",
+    "code": {
+        "type": "isdn",
+        "isdn": "ISDN278-4-874194-02-4",
+        "cCode": "C3455",
+        "url": "https://isdn.jp/2784874194024"
+    },
+    "pages": 64,
+    "author": {
+        "show": "情報工学同好会 総員",
+        "detail": [
+            "s23112",
+            "s23114",
+            "s23118",
+            "s23125",
+            "s23131"
+        ]
+    },
+    "tableOfContents": [
+        "ンゴシリーズの環境作るンゴ",
+        "ジェネリックBveEx作るンゴ",
+        "Bitcoinで儲けるンゴ",
+        "楕円曲線暗号使うンゴ",
+        "ChatBot作るンゴ",
+        "Wi-FiのBSSIDを使って端末の盗難を検出するンゴ"
+    ],
+    "genre": [
+        "general"
+    ],
+    "language": "ja",
+    "isR18": false,
+    "tags": [
+        "BveEx",
+        "Bitcoin",
+        "暗号",
+        "AI",
+        "Wi-Fi",
+        "楽しちゃダメだから"
+    ],
+    "price": 500,
+    "priceUnit": "JPY",
+    "size": "A4",
+    "notes": "表紙のゲームボーイアドバンスは本誌には登場しません。",
+    "onlineSaleUrl": "https://csc-a452p.booth.pm/items/7586701",
+    "salesHistory": [
+        {
+            "event": "沼津高専 第60回高専祭",
+            "start": "2024-11-08",
+            "end": "2024-11-09",
+            "revision": 1,
+            "price": 500,
+            "priceUnit": "JPY"
+        }
+    ],
+    "revisionHistory": [
+        {
+            "revision": 1,
+            "print": 1,
+            "releaseDate": "2025-11-01",
+            "place": "沼津高専 第60回高専祭"
+        }
+    ],
+    "additionalFields": {
+    },
+    "additionalLinks": {
+        "ISDN 登録情報": "https://isdn.jp/2784874194024"
+    }
+}

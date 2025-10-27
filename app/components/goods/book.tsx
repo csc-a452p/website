@@ -56,7 +56,7 @@ export default function GoodsBook({ id, p }: { id: string, p: goodsBook }) {
                                             </tr>
                                             <tr>
                                                 <td>販売価格</td>
-                                                <td>{p.price} {p.priceUnit}</td>
+                                                <td>{p.price.toLocaleString()} {p.priceUnit}</td>
                                             </tr>
                                             {
                                                 p.additionalFields !== undefined ? Object.keys(p.additionalFields).map(e => (

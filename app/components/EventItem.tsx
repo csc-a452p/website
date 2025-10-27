@@ -23,7 +23,7 @@ export default function EventItem({ event }: { event: eventType }) {
                         <tr key={e.name}>
                             <td>{e.isNewly ? "新刊" : "既刊"}</td>
                             <td><DLink href={e.id.startsWith("https://") ? e.id : `/goods/${e.id}`}>{e.name}</DLink></td>
-                            <td>{e.price} {e.priceUnit}</td>
+                            <td className="text-right">{e.price.toLocaleString()} {e.priceUnit}</td>
                         </tr>
                     ))}
                 </tbody>

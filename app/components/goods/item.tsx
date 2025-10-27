@@ -42,7 +42,7 @@ export default function GoodsItem({ id, p }: { id: string, p: goodsItem }) {
                                             </tr>
                                             <tr>
                                                 <td>販売価格</td>
-                                                <td>{p.price} {p.priceUnit}</td>
+                                                <td>{p.price.toLocaleString()} {p.priceUnit}</td>
                                             </tr>
                                             <tr>
                                                 <td>販売開始日</td>

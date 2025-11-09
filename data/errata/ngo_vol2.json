@@ -1,0 +1,9 @@
+{
+    "1": [
+        {
+            "at": "p.11 7行目",
+            "wrong": "EvebtInfo event=type.GetEvent(イベント名);",
+            "correct": "EventInfo event=type.GetEvent(イベント名);"
+        }
+    ]
+}
